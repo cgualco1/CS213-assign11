@@ -1,0 +1,43 @@
+body {
+    margin: 0; 
+    width: 100vw;
+}
+
+header,
+.main{
+    position: relative;
+    z-index: 1;
+}
+
+.main {
+    background: aliceblue;
+    box-shadow: 0 2rem 4rem #000;
+    min-height: 100vh;
+}
+
+#logo img{
+    width: 250px;
+    height: auto;
+}
+
+footer{
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background: grey;
+    padding: 20px;
+}
+footer #contact{
+    max-width: 250px;
+    padding: 5px;
+    font-size: large;
+    font-family: Andale Mono, monospace;
+    color: turquoise;
+    border-style: inset;
+    border-color: whitesmoke;
+    border-width: 4px;
+}
+
+#social{
+    color: whitesmoke;
+}

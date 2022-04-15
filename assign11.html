@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assign11.css">
+    <link rel="stylesheet" href="assign11_shop.css">
+    <script src="assign11_shop.js"></script>
+    <title>Cameron Gualco Photography</title>
+</head>
+<body>
+
+    <header>
+        <div id="logo">
+          <img src="logo.png" alt="my logo">
+        </div>
+        <nav>
+          <a class="active" href="assign11-1.html">Home</a>
+          <a href="assign11-2.html">Gallary</a>
+          <a href="assign11.html">Shop</a>
+          <a href="#contact">Contact Me</a>
+        </nav>
+    </header>
+
+    <div class="main">  
+        <h1>CG Photogrophy Prints</h1>
+        <div class="shop_gallery">
+            <div class="picture">
+                <img class="img" src="images/deer-min.jpg" alt="a yound buck">
+                <div class="middle">
+                    <div class="name">The Courious Young Buck</div>
+                    <button type="button" class="purchase" onclick="openForm()">Buy Now</button>
+                </div>   
+            </div>
+            <div class="picture">
+                <img src="images/image1-min.jpg" alt="waterfall">
+                <div class="middle">
+                    <div class="name">The Trickling Stream</div>
+                    <button type="button" class="purchase" onclick="openForm()">Buy Now</button>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="images/image4-min.jpg" alt="butterfly">
+                <div class="middle">
+                    <div class="name">The Lone Butterfly</div>
+                    <button type="button" class="purchase" onclick="openForm()">Buy Now</button>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="images/image12-min.jpg" alt="sunset">
+                <div class="middle">
+                    <div class="name">Peace of the Sunset</div>
+                    <button type="button" class="purchase" onclick="openForm()">Buy Now</button>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="images/Lundbreck_Falls-min.jpg" alt="Lundbreck Falls">
+                <div class="middle">
+                    <div class="name">Lundbreck Falls</div>
+                    <button type="button" class="purchase" onclick="openForm()">Buy Now</button>
+                </div>
+            </div>
+            <div class="picture">
+                <img src="images/image5-min.jpg" alt="lightning">
+                <div class="middle">
+                    <div class="name">When Lightning Stikes</div>
+                    <button type="button" class="purchase" onclick="openForm()">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-popup" id="myForm" >
+            <form action="assign11.php" name="myForm" class="form-container" onsubmit="return formValidation()" method="GET">
+                <h1>Purchase Prints</h1>
+                <div class="total" id="checkbox">
+                    <input type="checkbox" id="option1" name="item_1" value="10.99" onchange="getTotal()">
+                    <label for="option1"> 6x6 Print - $10.99</label>
+                    <input type="checkbox" id="option2" name="item_2" value="15.99" onchange="getTotal()">
+                    <label for="option2"> 8x8 Print - $15.99</label>
+                    <input type="checkbox" id="option3" name="item_3" value="20.99" onchange="getTotal()">
+                    <label for="option3"> 10x10 Print - $20.99</label>
+                    <input type="checkbox" id="option4" name="item_4" value="25.99" onchange="getTotal()">
+                    <label for="option4"> 12x12 Print - $25.99</label>
+                </div>
+                <div id="contact_info">
+                    <label id="warning1" for="first_name"><b>First Name</b></label>
+                    <input type="text" placeholder="First Name"  id="first_name" name="first_name">
+                
+                    <label id="warning2" for="last_name"><b>Last Name</b></label>
+                    <input type="text" placeholder="Last Name" id="last_name" name="last_name">
+                
+                    <label id="warning3" for="address"><b>Mailing Address</b></label>
+                    <textarea id="address" name="address" placeholder="Street address, City, State, and Zipcode"></textarea>
+                
+                    <label id="warning4" for="phone"><b>Phone Number</b></label>
+                    <input type="text" id="phone" name="phone" placeholder="208-555-5555">
+                </div>
+
+                <div id="payment">
+                    <label for="total"><b>Your Total</b></label>
+                    <input type="text" disabled="disabled" id="total" name="total">
+
+                    <input type="radio" id="visa" name="card">
+                    <label for="visa">Visa</label>
+                    <input type="radio" id="MasterCard" name="card">
+                    <label for="MasterCard">Master Card</label>
+                    <input type="radio" id="AmericanExpress" name="card">
+                    <label for="AmericanExpress">American Express</label><br>
+
+                    
+                    <label id="warning5" for="credit_card"><b>Credit Card Number</b></label>
+                    <input type="text" placeholder="1111 1111 1111 1111" id="credit_card" name="credit_card">
+                    
+                    <label id="warning6" for="exp_date"><b>Expiry Date</b></label>
+                    <input type="text" id="exp_date" name="exp_date" placeholder="01/2021">
+                </div>
+                
+                <div id="button">
+                    <button type="submit" class="btn" name="validte">Check Out</button>
+                    <button type="reset" class="btn reset" value="reset">Reset</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </div>
+            </form>
+        </div>  
+    </div>
+
+  <footer>
+      <div id="contact">
+          Cameron Gualco<br>
+          Magrath Alberta<br>
+          <a href="mailto:cameron.g.photo@gmail.com">cameron.g.photo@gmail.com</a><br>
+          (587)-821-2462<br>
+          <hr>
+          <span id="social">
+            Find Me On:<br>
+            <a href="https://www.facebook.com/CameronGualcoPhotography" target="_blank">Facebook</a> and
+            <a href="https://www.instagram.com/cameron_gualco_photography/" target="_blank">Instagram</a>
+          </span>
+      </div>
+  </footer>
+</body>
+</html>
